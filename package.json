@@ -1,0 +1,17 @@
+{
+  "name": "rwdm-finance-management",
+  "version": "1.0.0",
+  "description": "RWDM — Rural Woman Development Mission | Group-Based Financial Management System",
+  "scripts": {
+    "dev": "npx kill-port 5000 5173 5174 5175 && concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "start": "npm --prefix server start",
+    "kill-ports": "npx kill-port 5000 5173 5174 5175"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "kill-port": "^2.0.1"
+  }
+}
